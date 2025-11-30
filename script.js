@@ -54,5 +54,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Step 6: Invoke addTask on DOMContentLoaded (per instructions)
     // Note: This will run once when the page loads, but since input is empty,
     // it will trigger the alert. This matches the given instructions.
-    addTask();
+    //addTask();
 });
