@@ -1,3 +1,5 @@
+// script.js
+
 // Step 1: Setup Event Listener for Page Load
 document.addEventListener('DOMContentLoaded', function() {
     // Step 2: Select DOM Elements
@@ -48,6 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Step 7: Invoke addTask on DOMContentLoaded
-    addTask(); // This matches the instruction to invoke addTask on load
+    // ✅ FIX: Do NOT call addTask() here
+    // The function should only run when user interacts
 });
