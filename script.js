@@ -1,5 +1,3 @@
-// script.js
-
 // Step 1: Setup Event Listener for Page Load
 document.addEventListener('DOMContentLoaded', function() {
     // Step 2: Select DOM Elements
@@ -12,17 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Retrieve and trim the input value
         const taskText = taskInput.value.trim();
 
-        // Check if taskText is empty
+        // Step 4: Check if taskText is not empty
         if (taskText === "") {
             alert("Please enter a task.");
             return;
         }
 
-        // Step 4: Task Creation
+        // Step 5: Task Creation and Removal
         const li = document.createElement('li');
         li.textContent = taskText;
 
-        // Create remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
         removeButton.className = 'remove-btn';
@@ -38,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Append li to task list
         taskList.appendChild(li);
 
-        // Clear input field
+        // Clear the input field
         taskInput.value = "";
     }
 
-    // Step 5: Attach Event Listeners
+    // Step 6: Attach Event Listeners
     addButton.addEventListener('click', addTask);
 
     taskInput.addEventListener('keypress', function(event) {
@@ -51,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Step 6: Invoke addTask on DOMContentLoaded (per instructions)
-    // Note: This will run once when the page loads, but since input is empty,
-    // it will trigger the alert. This matches the given instructions.
-    //addTask();
+    // Step 7: Invoke addTask on DOMContentLoaded
+    addTask(); // This matches the instruction to invoke addTask on load
 });
